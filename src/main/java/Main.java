@@ -29,7 +29,7 @@ public class Main {
             return new ModelAndView(attributes, "index.html");
         }, new FreeMarkerEngine());
 
-    get("/db", (req, res) -> {
+   /* get("/db", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();
       try {
@@ -53,7 +53,7 @@ public class Main {
       } finally {
         if (connection != null) try{connection.close();} catch(SQLException e){}
       }
-    }, new FreeMarkerEngine());
+    }, new FreeMarkerEngine());*/
 
   }
 
