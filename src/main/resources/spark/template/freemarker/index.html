@@ -39,7 +39,10 @@ function abc(){
 	var formEmailVar = document.getElementById("form-email").value;
 	var formMsgVar = document.getElementById("form-msg").value;
 	
-	if(formNameVar.length < 1){
+	if(!((formNameVar.length < 1)||(formEmailVar.length < 1)||(formMsgVar.length < 1))){
+		window.open('mailto:amogh.harde@gmail.com?subject='+formEmailVar+'&body='+formMsgVar+'%0A'+'From - '+formNameVar);
+	}
+	/* if(formNameVar.length < 1){
 		formNameVar ="Name = none";
 	}
 	if(formEmailVar.length < 1){
@@ -47,9 +50,9 @@ function abc(){
 	}
 	if(formMsgVar.length < 1){
 		formMsgVar = "Message = none";
-	}
+	} */
 	
-	window.open('mailto:amogh.harde@gmail.com?subject='+formEmailVar+'&body='+formMsgVar+'%0A'+formNameVar);
+	
 	
 }
 </script>
